@@ -1,0 +1,173 @@
+@use "../../globals/functions.scss" as *;
+.section {
+  margin: 70px 0;
+  padding: 0 20px;
+  @include responsive(1254px) {
+    text-align: center;
+    padding: 0;
+  }
+  &-heading {
+    font-size: 28px;
+    color: var(--black-dark2);
+
+    .badge {
+      font-size: 18px;
+      background: #ff8c00;
+      border-radius: 3px;
+      color: #fff;
+      margin-left: 4px;
+      padding: 4px 16px;
+      vertical-align: middle;
+      @include responsive(768px) {
+        font-size: 12px;
+        font-weight: 400;
+        padding: 2px 8px;
+      }
+    }
+  }
+  &-description {
+    display: flex;
+    justify-content: space-between;
+    @include responsive(1254px) {
+      justify-content: center;
+    }
+    &-heading {
+      font-size: 18px;
+      color: var(--black-dark1);
+      @include responsive(767px) {
+        font-size: 16px;
+      }
+    }
+    &-link {
+      color: var(--blue-light2);
+      font-weight: 600;
+      @include responsive(1254px) {
+        display: none;
+      }
+    }
+  }
+  .categories-container.trainings {
+    padding: 0 20px;
+  }
+  .categories-container {
+    margin-top: 40px;
+    &-heading {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--black-dark2);
+    }
+    .categories {
+      overflow-x: hidden;
+    }
+
+    .categories-flex {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      @include responsive(1254px) {
+        max-width: 700px;
+        margin: 0 auto;
+        justify-content: center;
+        gap: 10px;
+      }
+      @include responsive(767px) {
+        max-width: 400px;
+        justify-content: center;
+        gap: 20px;
+      }
+
+      .card {
+        text-align: center;
+        width: 140px;
+        min-height: 156px;
+        border-radius: 6px;
+        padding: 16px 8px;
+        @include responsive(767px) {
+          border: 1px solid #eee;
+        }
+        &:hover {
+          box-shadow: 0 2px 8px rgb(0 0 0 / 12%);
+          .card-text {
+            color: var(--blue-light1);
+          }
+        }
+
+        &-text {
+          color: var(--black-dark2);
+          font-weight: 500;
+          padding: 15px 0;
+        }
+      }
+    }
+
+    .jobs-categories-flex {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      @include responsive(1254px) {
+        max-width: 260px;
+        margin: 0 auto;
+        justify-content: space-between;
+      }
+      .card {
+        text-align: center;
+        min-height: 156px;
+        margin: 0 64px;
+        @include responsive(1254px) {
+          margin: 0 30px;
+          min-height: auto;
+          margin: 0;
+          width: 100%;
+        }
+        @include responsive(766px) {
+          display: flex;
+          align-items: center;
+        }
+
+        &-text {
+          color: var(--black-dark2);
+          font-weight: 600;
+          padding: 15px 0;
+          // width: max-content;
+          @include responsive(1254px) {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+    .scrollable-container {
+      overflow-x: scroll;
+      margin-top: 40px;
+      display: flex;
+      padding: 2px 2px;
+      justify-content: space-between;
+      gap: 10px;
+      &::-webkit-scrollbar {
+        visibility: hidden;
+      }
+      .card {
+        text-align: center;
+        width: 140px;
+        min-height: 156px;
+        border-radius: 6px;
+        padding: 16px 8px;
+        @include responsive(767px) {
+          border: 1px solid #eee;
+        }
+        &:hover {
+          box-shadow: 0 2px 8px rgb(0 0 0 / 12%);
+          .card-text {
+            color: var(--blue-light1);
+          }
+        }
+
+        &-text {
+          color: var(--black-dark2);
+          font-weight: 500;
+          padding: 15px 0;
+        }
+      }
+    }
+  }
+}

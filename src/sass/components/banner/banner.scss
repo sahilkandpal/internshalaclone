@@ -1,0 +1,62 @@
+@use "../../globals/functions.scss" as *;
+.banner-container {
+  .slide {
+    max-width: 1052px;
+    max-height: 352px;
+    height: 32vw;
+    width: calc(100vw - 32px - 17px);
+    display: block !important;
+    margin: 0 auto;
+    box-shadow: 0 2px 6px rgb(0 0 0 / 12%);
+    border-radius: 3px;
+    @include responsive(574px) {
+      height: 45vw;
+      min-height: 160px;
+      max-height: initial;
+      box-shadow: 0 0 8px rgb(0 0 0 / 8%);
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 0%;
+    }
+  }
+  .slick-arrow {
+    z-index: 5;
+    &::before {
+      color: #000;
+      height: 20px;
+      font-size: 35px;
+      @include responsive(1254px) {
+        display: none;
+      }
+    }
+  }
+  .slick-prev {
+    left: 25px;
+  }
+  .slick-next {
+    right: 40px;
+  }
+  .slick-dots {
+    bottom: -35px;
+    li {
+      button {
+        &::before {
+          font-size: 15px;
+          @include responsive(1254px) {
+            font-size: 10px;
+          }
+        }
+      }
+    }
+    .slick-active {
+      button {
+        &::before {
+          color: var(--blue-light2);
+        }
+      }
+    }
+  }
+}

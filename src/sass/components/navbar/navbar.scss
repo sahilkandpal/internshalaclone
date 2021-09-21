@@ -1,0 +1,59 @@
+@use "../../globals/functions.scss" as *;
+.navbar {
+  padding: 5px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 15%);
+  @include responsive(992px) {
+    padding: 20px 20px;
+  }
+  .navbar-logo {
+    img {
+      width: 112px;
+    }
+  }
+  .navbar-items {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    ul {
+      margin: 0;
+      display: flex;
+      align-items: center;
+      @include responsive(992px) {
+        display: none;
+      }
+      .navbar-item {
+        list-style: none;
+        padding: 15px;
+        font-size: 14px;
+        font-weight: 500;
+        color: var(--black-dark1);
+        .offer {
+          padding: 3px 6px;
+          font-size: 12px;
+          color: #fff;
+          background-color: #ff8c00;
+          border-radius: 4px;
+          margin-left: 5px;
+        }
+        .btn {
+          font-weight: 600;
+        }
+        .navbar-btn-light {
+          color: var(--blue-light2);
+          border-radius: 3px;
+          border: 1px solid var(--blue-light2);
+          padding: 7px 15px;
+        }
+      }
+    }
+    .navbar-btn-dark {
+      color: #fff;
+      background-color: var(--blue-light1);
+      border-radius: 3px;
+      padding: 7px 16px;
+    }
+  }
+}
