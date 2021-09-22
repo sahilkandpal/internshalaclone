@@ -1,5 +1,5 @@
 import React from "react";
-
+import Card from "../Card/Card";
 const Trainings = () => {
   const trainingData = [
     {
@@ -56,11 +56,8 @@ const Trainings = () => {
       </div>
       <div className="categories-container trainings">
         <div className="categories-flex">
-          {trainingData.map((city) => (
-            <div className="card">
-              <img className="card-img" src={city.imgUrl} alt="" />
-              <div className="card-text">{city.title}</div>
-            </div>
+          {trainingData.map((training, index) => (
+            <Card key={index} data={training} />
           ))}
         </div>
       </div>

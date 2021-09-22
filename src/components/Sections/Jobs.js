@@ -1,5 +1,5 @@
 import React from "react";
-
+import Card from "../Card/Card";
 const Jobs = () => {
   const jobData = [
     {
@@ -31,11 +31,8 @@ const Jobs = () => {
       </div>
       <div className="categories-container">
         <div className="jobs-categories-flex">
-          {jobData.map((city) => (
-            <div className="card">
-              <img className="card-img" src={city.imgUrl} alt="" />
-              <div className="card-text">{city.title}</div>
-            </div>
+          {jobData.map((job, index) => (
+            <Card key={index} data={job} />
           ))}
         </div>
       </div>

@@ -1,5 +1,5 @@
 import React from "react";
-
+import Card from "../Card/Card";
 const Internships = () => {
   const cityData = [
     {
@@ -101,11 +101,8 @@ const Internships = () => {
         <div className="categories-container-heading">Popular cities</div>
         <div className="categories">
           <div className="scrollable-container">
-            {cityData.map((city) => (
-              <div className="card">
-                <img className="card-img" src={city.imgUrl} alt="" />
-                <div className="card-text">{city.title}</div>
-              </div>
+            {cityData.map((city, index) => (
+              <Card key={index} data={city} />
             ))}
           </div>
         </div>
@@ -114,11 +111,8 @@ const Internships = () => {
           <div className="categories-container-heading">Popular categories</div>
           <div className="categories">
             <div className="scrollable-container">
-              {categoryData.map((city) => (
-                <div className="card">
-                  <img className="card-img" src={city.imgUrl} alt="" />
-                  <div className="card-text">{city.title}</div>
-                </div>
+              {categoryData.map((category, index) => (
+                <Card key={index} data={category} />
               ))}
             </div>
           </div>

@@ -53,57 +53,69 @@ const Footer = () => {
       <div className="footer-row">
         <div className="footer-col">
           <div className="footer-col-heading">Internship by places</div>
-          {footerData.places.map((place) => (
-            <a href="">{place.text}</a>
+          {footerData.places.map((place, index) => (
+            <a href="##" key={index}>
+              {place.text}
+            </a>
           ))}
         </div>
         <div className="footer-col">
           <div className="footer-col-heading">Internship by Stream</div>
-          {footerData.streams.map((stream) => (
-            <a href="">{stream.text}</a>
+          {footerData.streams.map((stream, index) => (
+            <a href="##" key={index}>
+              {stream.text}
+            </a>
           ))}
         </div>
         <div className="footer-col">
           <div className="footer-col-heading">Online Trainings</div>
-          {footerData.trainings.map((training) => (
-            <a href="">{training.text}</a>
+          {footerData.trainings.map((training, index) => (
+            <a href="##" key={index}>
+              {training.text}
+            </a>
           ))}
         </div>
         <div className="footer-col">
           <div className="footer-col-heading">About Internshala</div>
-          {footerData.aboutLinks.map((aboutLink) => (
-            <a href="">{aboutLink.text}</a>
+          {footerData.aboutLinks.map((aboutLink, index) => (
+            <a href="##" key={index}>
+              {aboutLink.text}
+            </a>
           ))}
         </div>
       </div>
       <div className="footer-trainings">
         <div className="footer-trainings-heading">
-          OnlineTrainings<span class="badge">OFFER</span>
+          OnlineTrainings<span className="badge">OFFER</span>
         </div>
         <div className="list-grid">
-          {footerData.trainings.map((training) => (
-            <a href="">{training.text}</a>
+          {footerData.trainings.map((training, index) => (
+            <a href="##" key={index}>
+              {training.text}
+            </a>
           ))}
         </div>
       </div>
       <div className="footer-about">
         <div className="list-grid">
-          {footerData.aboutLinks.map((aboutLink) => (
-            <a href="">{aboutLink.text}</a>
+          {footerData.aboutLinks.map((aboutLink, index) => (
+            <a href="##" key={index}>
+              {aboutLink.text}
+            </a>
           ))}
         </div>
       </div>
       <div className="footer-bottom">
         <div className="footer-social">
           <div className="store-btn">
-            <i class="fab fa-google-play"></i>
+            <i className="fab fa-google-play"></i>
             Get Android App
           </div>
           <div className="social-links">
-            <i class="fab fa-instagram"></i>
-            <i class="fab fa-twitter"></i>
-            <i class="fab fa-youtube"></i>
-            <i class="fab fa-linkedin"></i>
+            <i className="fab fa-instagram"></i>
+            <i className="fab fa-twitter"></i>
+            <i className="fab fa-youtube"></i>
+            <i className="fab fa-linkedin"></i>
           </div>
         </div>
         <div className="copyright">&copy; Copyright 2021 Internshala</div>
